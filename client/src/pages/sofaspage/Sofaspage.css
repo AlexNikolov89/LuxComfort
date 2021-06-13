@@ -1,0 +1,25 @@
+.sofaspage_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sofaspage_text {
+    display: flex;
+    width: 75%;
+}
+
+.text {
+    justify-content: center;
+    text-align: center;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.sofaspage_card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    padding: 30px;
+}

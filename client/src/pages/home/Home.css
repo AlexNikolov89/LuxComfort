@@ -1,0 +1,27 @@
+.home__container {
+}
+
+.banner__text {
+    position: absolute;
+    top: 300px;
+    left: 100px;
+}
+
+.banner__text > h1, h2 {
+    font-size: 40px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    
+}
+
+.text__wrapp {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* .text__wrapp > h2 {
+    font-size: 35px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 800;
+} */
