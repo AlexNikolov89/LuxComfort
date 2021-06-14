@@ -1,12 +1,23 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useState} from 'react'
 import SearchIcon from '@material-ui/icons/Search';
 import PersonIcon from '@material-ui/icons/Person';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 import './Navbar.css'
 import {Link} from 'react-router-dom'
+import { useSelector } from 'react-redux';
+
 
 const NavbarTop = () => {
+    const [open, setOpen] = useState(false)
+
+    const dropdownHandler = () => {
+        setOpen(open => !open)
+    }
+
+    const addToCartReducer = useSelector(state => state.addToCartReducer)
+    const {cartItems} = addToCartReducer;
+
     return (
         <Fragment>
             <div className='navbar__container'>
@@ -23,9 +34,16 @@ const NavbarTop = () => {
                 </div>
 
                 <div className='navbar__login'>
-                    <PersonIcon style={{ marginRight: '25px' }} />
+                    <LocalMallOutlinedIcon /> <p>({cartItems.length})</p>
                     <FavoriteBorderIcon style={{ marginRight: '25px' }} />
-                    <LocalMallOutlinedIcon style={{ marginRight: '80px' }} />
+                    <PersonIcon onClick={dropdownHandler} style={{ marginRight: '30px' }} />
+                        {open ? (
+                            <div className='dropdown_container'>
+                                <Link to='/login'>Login / Register</Link>
+                                <hr />
+                                <Link to='/orders'>My Orders</Link>
+                            </div>
+                        ) : null}
                 </div>
             </div>
         </Fragment>

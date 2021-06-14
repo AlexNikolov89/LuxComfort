@@ -62,7 +62,14 @@
 }
 
 .navbar__login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+}
 
+.navbar__login > p {
+    margin-right: 25px;
 }
 
 {/**Navbar Bottom container*/}
@@ -78,4 +85,25 @@
     color: black;
     text-decoration: none;
     padding: 25px 0;
+}
+
+.dropdown_container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    background-color: white;
+    width: 150px;
+    height: 80px;
+    position: absolute;
+    top: 60px;
+    right: 5px;
+    border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown_container > a {
+    color: black;
+    text-decoration: none;
 }

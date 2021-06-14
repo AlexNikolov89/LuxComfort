@@ -1,24 +1,24 @@
 import React from 'react'
-import './Sofa.css'
+import './Chair.css'
 import Rating from '../rating/Rating'
 import {Link} from 'react-router-dom'
 
-const Sofa = ({sofa}) => {
-    console.log(sofa)
+const Chair = ({chair}) => {
+    //console.log(chair)
     
     return (
         <div className='sofa_container'>
             <div className='sofa_card'>
                 <div className="sofa_imagewrapper">
-                    <img className='sofa_img' src={sofa.image} alt={sofa.name} />
+                    <img className='sofa_img' src={chair.image} alt={chair.name} />
                 </div>
 
                 <div className="sofa_info">
-                <Link to={`/product/${sofa._id}`}><h3>{sofa.name}</h3></Link>
+                <Link to={`/product/${chair._id}`}><h3>{chair.name}</h3></Link>
                     
                     <div className="sofa_price_wrapper">
-                        <h3>CHF {sofa.price}</h3>
-                        <Rating value={sofa.rating} text={`${sofa.numReviews}reviews`} />
+                        <h3>CHF {chair.price}</h3>
+                        <Rating value={chair.rating} text={`${chair.numReviews}reviews`} />
                     </div>
 
                     <p className='shipping'>Free Shipping</p>
@@ -28,4 +28,4 @@ const Sofa = ({sofa}) => {
     )
 }
 
-export default Sofa
+export default Chair

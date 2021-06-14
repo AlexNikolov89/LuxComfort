@@ -31,16 +31,7 @@
     justify-content: center;
 }
 
-.fa-heart {
-    position: relative;
-    top: -220px;
-    right: -290px;
-    font-size: 25px;
-}
 
-.fa-heart:hover {
-    color: red;
-}
 
 .sofa_info{
     display: flex;

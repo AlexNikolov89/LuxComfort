@@ -1,6 +1,4 @@
 import React, { Fragment } from 'react'
-import products from '../../products'
-import Banner from '../../images/livingroomcover.jpg'
 import './Home.css'
 import LatestProducts from '../../components/latest/LatestProducts'
 import {Link} from 'react-router-dom'
@@ -10,7 +8,7 @@ const Home = () => {
         <Fragment>
             <div className='home__container'>
                 <div className='home__banner'>
-                    <img style={{ width: '100%' }} src={Banner} alt="livingroom"/>
+                    <img style={{ width: '100%' }} src='/images/livingroomcover.jpg' alt="livingroom"/>
                     <Link to='/style-and-advice/livingroom' style={{ color: 'black' }}>
                     <div className='banner__text'>
                         <h1>Discover handy tips and</h1>

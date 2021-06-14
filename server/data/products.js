@@ -1,8 +1,7 @@
 const products = [
     {
-        id: '1',
         name: 'Lile',
-        image: '/images/chairs/dining-chairbeige.jfif',
+        image: '/images/chairs/dining-chair-beige.jfif',
         description: 'The perfect seat for dining, our Lule chairs.',
         category: 'Dining Chairs',
         price: 149.99,
@@ -11,7 +10,6 @@ const products = [
         numReviews: 4
     },
     {
-        id: '2',
         name: 'Kuper',
         image: '/images/beds/kingsize-bed.jpg',
         description: 'Kiruna Double Bed, Kuper',
@@ -22,9 +20,8 @@ const products = [
         numReviews: 6
     },
     {
-        id: '3',
         name: 'Skye',
-        image: '/images/bed/sdouble-bed.jpg',
+        image: '/images/beds/double-bed.jpg',
         description: 'Skye King Size Bed, Dark Blue Weave with Black Legs',
         category: 'Beds',
         price: 1200.99,
@@ -33,7 +30,6 @@ const products = [
         numReviews: 3
     },
     {
-        id: '4',
         name: 'Romance',
         image: '/images/sofas/2-sits-png.png',
         description: 'Goswell 2 Seater Sofa, Sapphire Blue Velvet',
@@ -44,7 +40,6 @@ const products = [
         numReviews: 3
     },
     {
-        id: '5',
         name: 'King Corner Sofa',
         image: '/images/sofas/2-sits-png.png',
         description: 'Goswell 2 Seater Sofa, Sapphire Blue Velvet',
@@ -55,7 +50,6 @@ const products = [
         numReviews: 3
     },
     {
-        id: '6',
         name: 'Comfort 3 Seats Sofa',
         image: '/images/sofas/3-sits/3-sits-png.png',
         description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium',
@@ -66,9 +60,8 @@ const products = [
         numReviews: 2
     },
     {
-        id: '7',
         name: 'Safira Corder Seats Sofa',
-        image: '/images/sofas/corner/cornes-sofa.jpg',
+        image: '/images/sofas/corner/corner-sofa.jpg',
         description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium',
         category: 'Sofa',
         price: 850.99,
@@ -78,4 +71,4 @@ const products = [
     }
 ]
 
-export default products
+module.exports = products

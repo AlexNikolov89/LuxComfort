@@ -1,12 +1,15 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useEffect} from 'react'
 import Product from './Product'
 import './LatestProducts.css'
-import products from '../../products'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import {useDispatch, useSelector} from 'react-redux'
+import { getAllProducts } from '../../store/actions/productActions';
+
 
 const LatestProducts = () => {
+    const dispatch = useDispatch()
     let settings = {
         dots: true,
         infinite: true,
@@ -14,6 +17,14 @@ const LatestProducts = () => {
         slidesToShow: 3,
         slidesToScroll: 1
     }
+
+    const getAllProductsReducer = useSelector(state => state.getAllProductsReducer)
+    const {loading, products, error} = getAllProductsReducer;
+
+
+    useEffect(() => {
+       dispatch(getAllProducts()) 
+    }, [dispatch])
 
     // const allProducts = products.filter(product => product.length === 6)
     // console.log("🚀 ~ file: LatestProducts.js ~ line 19 ~ LatestProducts ~ allProducts", allProducts)
@@ -24,9 +35,10 @@ const LatestProducts = () => {
                 <h1>Our Latest Products</h1>
 
                 <Slider {...settings}>
-                
-                    {products.map(product => {
-                        return <Product product={product} key={product.id} />
+                    {loading && <h1>Loading...</h1>}
+                    {error && <h1>Error...</h1>}
+                    {products.map((product) => {
+                        return <Product product={product} key={product._id} />
                         
                     })}
                 </Slider>
