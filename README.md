@@ -1,4 +1,4 @@
-# LuxComfort
+# Joy - LuxComfort
 
 LuxComfort is my own project idea.
 As an ex interior Designer, I have decided to create e-commerce shop for selling furniture and give ideas and tips about home design or any 
