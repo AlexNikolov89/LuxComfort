@@ -1,13 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Login.css'
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
+import {useDispatch, useSelector} from 'react-redux'
+import { loginUser } from '../../store/actions/userActions'
+
+
 
 const Login = () => {
+    const dispatch = useDispatch()
+    const history = useHistory()
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const handleSubmit = () => {
-        
+    const userLoginReducer = useSelector(state => state.userLoginReducer)
+    const {loading, userInfo, error} = userLoginReducer
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        dispatch(loginUser({email, password}))
+        history.push('/')
     }
 
     return (
@@ -30,7 +42,7 @@ const Login = () => {
                     <p>No Account Created? </p>
                     <Link to='/register'>Register here!</Link>
                 </div>
-                <button className='signin_btn'>Sign In</button>
+                <button onSubmit={handleSubmit} className='signin_btn'>Sign In</button>
             </form>
         </div>
     )

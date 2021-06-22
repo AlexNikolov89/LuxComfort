@@ -10,6 +10,7 @@ import Tablespage from './pages/tablespage/Tablespage'
 import Productdetailpage from './pages/productdetailpage/Productdetailpage'
 import Login from './pages/login/Login'
 import Register from './pages/register/Register'
+import Cartpage from './pages/cartpage/Cartpage'
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route exact path='/product/:id' component={Productdetailpage} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
+          <Route exact path='/cartpage' component={Cartpage} />
         </Switch>
       </Router>
     </Fragment>
