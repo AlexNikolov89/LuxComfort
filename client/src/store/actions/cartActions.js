@@ -1,10 +1,11 @@
 import {
-    ADD_TO_CART
+    ADD_TO_CART,
+    CART_REMOVE_ITEM
 } from './types'
 
 export const addToCart = (product, quantity) => (dispatch, getState) => {
     const cartItem =  {
-        _id: product._id,
+        id: product._id,
         name: product.name,
         price: product.price,
         image: product.image,
@@ -18,5 +19,13 @@ export const addToCart = (product, quantity) => (dispatch, getState) => {
     })
     console.log(cartItem)
 
+    localStorage.setItem('cartItems', JSON.stringify(getState().addToCartReducer.cartItems))
+}
+
+export const removeFromCart = (id) => async (dispatch, getState) => {
+    dispatch({
+        type: CART_REMOVE_ITEM,
+        payload: id
+    })
     localStorage.setItem('cartItems', JSON.stringify(getState().addToCartReducer.cartItems))
 }

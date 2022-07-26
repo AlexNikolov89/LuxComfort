@@ -1,28 +1,28 @@
 import React, { Fragment } from 'react'
-import './Home.css'
 import LatestProducts from '../../components/latest/LatestProducts'
 import {Link} from 'react-router-dom'
+import { useStyles } from './styles'
+import { Button, Container, Typography } from '@material-ui/core'
+import Categories from '../../components/categories/Categories'
+import Banner from '../../components/banner/Banner'
+import NewsLetter from '../../components/newsLetter/NewsLetter'
+import DesignSteps from '../../components/designSteps/DesignSteps'
+import DecoratingTips from '../../components/decoratingTips/DecoratingTips'
+import AllProducts from '../../components/allProducts/AllProducts'
+
 
 const Home = () => {
+    const classes = useStyles()
     return (
-        <Fragment>
-            <div className='home__container'>
-                <div className='home__banner'>
-                    <img style={{ width: '100%' }} src='/images/livingroomcover.jpg' alt="livingroom"/>
-                    <Link to='/style-and-advice/livingroom' style={{ color: 'black' }}>
-                    <div className='banner__text'>
-                        <h1>Discover handy tips and</h1>
-                        <h2>styling inspiration</h2>
-                    </div>
-                    </Link>
-                </div>
-
-                <div className='home__container__products'>
-                    <LatestProducts />
-                </div>
-            </div>
-
-        </Fragment>
+        <Container maxWidth='xl'>
+            <Banner />
+            <Categories />
+            <LatestProducts />
+            <DesignSteps />
+            <DecoratingTips />
+            <AllProducts />
+            <NewsLetter />
+        </Container>
     )
 }
 

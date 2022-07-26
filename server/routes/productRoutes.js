@@ -28,4 +28,23 @@ router.get('/:id', async (req, res) => {
     }
 })
 
+// // get top rated products, Public route
+// router.get('/top', async (req, res) => {
+//     const products = await Product.find({}).sort({ rating: -1 }).limit(6)
+
+//     res.json(products)
+// })
+
+// router.get('/top-rated', async(req, res) => {
+//     try {
+//         const limitNumber = 6;
+//         const products = await Product.find({}).sort({ rating: -1 }).limit(limitNumber)
+//         res.send(products)
+//     } catch (error) {
+//         res.status(500).send('Server error')
+//     }
+// })
+
+
+
 module.exports = router

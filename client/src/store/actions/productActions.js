@@ -13,6 +13,7 @@ export const getAllProducts = () => async dispatch => {
         dispatch({ type: GET_ALL_PRODUCTS_REQUEST })
 
         const {data} = await axios.get('/products')
+        console.log("🚀 ~ file: productActions.js ~ line 16 ~ data", data)
 
         dispatch({
             type: GET_ALL_PRODUCTS_SUCCESS,
@@ -39,6 +40,24 @@ export const getProductById = (id) => async dispatch => {
     } catch (error) {
         dispatch({
             type: GET_PRODUCT_BY_ID_FAIL,
+            payload: error.message
+        })
+    }
+}
+
+export const listTopProducts = () => async dispatch => {
+    try {
+        dispatch({ type: 'PRODUCT_TOP_REQUEST' })
+
+        const {data} = await axios.get(`/products/top`)
+
+        dispatch({
+            type: 'PRODUCT_TOP_SUCCESS',
+            payload: data
+        })
+    } catch (error) {
+        dispatch({
+            type: 'PRODUCT_TOP_SUCCESS',
             payload: error.message
         })
     }

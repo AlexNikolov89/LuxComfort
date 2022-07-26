@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux'
 import { addToCartReducer } from './cartReducer'
-import { getAllProductsReducer, getProductByIdReducer } from './productReducer'
+import { getAllProductsReducer, productTopRateReducer, getProductByIdReducer } from './productReducer'
 import { userLoginReducer, registerReducer } from './userReducer'
 
 
@@ -9,5 +9,6 @@ export const rootReducer = combineReducers({
     getProductByIdReducer,
     addToCartReducer,
     userLoginReducer,
-    registerReducer
+    registerReducer,
+    productTopRateReducer
 })

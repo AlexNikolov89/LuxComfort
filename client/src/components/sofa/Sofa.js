@@ -1,29 +1,31 @@
 import React from 'react'
-import './Sofa.css'
 import Rating from '../rating/Rating'
 import {Link} from 'react-router-dom'
+import { useStyles } from './style'
+import { Card, Grid, Paper, Typography } from '@material-ui/core'
 
 const Sofa = ({sofa}) => {
+    const classes = useStyles()
     console.log(sofa)
     
     return (
-        <div className='sofa_container'>
-            <div className='sofa_card'>
-                <div className="sofa_imagewrapper">
-                    <img className='sofa_img' src={sofa.image} alt={sofa.name} />
-                </div>
-
-                <div className="sofa_info">
-                <Link to={`/product/${sofa._id}`}><h3>{sofa.name}</h3></Link>
+        <div className={classes.sofa}>
+            <div style={{ width: '100%' }}>
+            <Link to={`/product/${sofa._id}`} style={{ textDecoration: 'none'}}>
+                <img className={classes.image} src={sofa.image} alt={sofa.name} />
                     
-                    <div className="sofa_price_wrapper">
-                        <h3>CHF {sofa.price}</h3>
-                        <Rating value={sofa.rating} text={`${sofa.numReviews}reviews`} />
-                    </div>
-
-                    <p className='shipping'>Free Shipping</p>
+                <div className={classes.price}>
+                    <Typography variant='subtitle1' className={classes.typography}>
+                        <span style={{ fontWeight: '600' }}>{sofa.name}</span>
+                    </Typography>
+                    <Typography variant='subtitle1' className={classes.typography}>CHF {sofa.price}</Typography>
                 </div>
-            </div>
+               <Typography variant='body2' className={classes.typography}>{sofa.description.substr(0, sofa.description.indexOf('.'))}</Typography>
+                {/*<Typography variant='subtitle1' className={classes.typography}>
+                <i className='fas fa-truck'></i>
+    Free Shipping</Typography>*/}
+                </Link>
+                </div>
         </div>
     )
 }

@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import Sofa from '../../components/sofa/Sofa'
 import { getAllProducts } from '../../store/actions/productActions'
-import './Sofaspage.css'
+import { useStyles } from './style'
+import { Card, Container, Grid, Toolbar, Typography } from '@material-ui/core'
+import SofaCategories from '../../components/sofa/SofaCategories'
 
 
 const Sofaspage = () => {
+    const classes = useStyles()
     const dispatch = useDispatch()
     //const [products, setProducts] = useState([])
 
@@ -23,19 +26,22 @@ const Sofaspage = () => {
     //console.log(sofas)
     
     return (
-        <div className='sofaspage_container'>
-        <h1>Sofas ({sofas.length} Articles)</h1>
+        <Container maxWidth='lg'>
+        <div className={classes.sofaspage}>
+            <Typography gutterBottom={true} className={classes.title} variant='h4'>Sofas ({sofas.length} Articles)</Typography>     
+            {/*<SofaCategories /> */}
+            <Typography variant='subtitle1' className={classes.text}>Space. Space to relax. Space to enjoy. Space to snuggle. Space to stretch. Space to invite. Give yourself the space you need with one of our sofas.</Typography>
 
-            <div className='sofaspage_text'>
-                <h3 className='text'>A wild mess? Not even close. On this page we have not only listed a lot of pretty furniture that you can find inspiration by scrolling through. Below you will also find some great tips on how to find the perfect furniture for you.</h3>
-            </div>
-            <div className="sofaspage_card">
-            {sofas.map(sofa => {
-                return <Sofa key={sofa.id} sofa={sofa} />
+            
+            <Grid container className={classes.gridContainer}>
+            {sofas.map((sofa, id) => {
+                return (
+                    <Sofa key={id} sofa={sofa} />)
             })}
-            </div>
+            </Grid>
            
         </div>
+        </Container>
     )
 }
 
