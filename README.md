@@ -12,31 +12,34 @@ It is still under construction :) but you can have a look from my screenshots be
 
 # Homepage
 
-![home1](https://user-images.githubusercontent.com/66255010/122930457-4c99ab00-d36c-11eb-824c-0b417ebb6e4e.png)
-
-# Homepage - carousel- latest products rendering
-
-![home2](https://user-images.githubusercontent.com/66255010/122930713-81a5fd80-d36c-11eb-83b2-e587d78feb49.png)
-
-# Signin
-
-![login](https://user-images.githubusercontent.com/66255010/122930852-9f736280-d36c-11eb-8b7b-8d9de422b737.png)
-
-![loginopenbox](https://user-images.githubusercontent.com/66255010/122930960-b914aa00-d36c-11eb-8ccd-d4ab62661acb.png)
-
+![homepage](https://user-images.githubusercontent.com/66255010/181220340-03c262f3-d589-4311-94c7-1d88a02f687d.png)
+![homepage2](https://user-images.githubusercontent.com/66255010/181220403-e6838775-333c-4d1c-b7b7-f602966e4a7e.png)
+![homepage3](https://user-images.githubusercontent.com/66255010/181220455-c10f8831-79e0-4f51-a906-cefa7379ab50.png)
+![homepage4](https://user-images.githubusercontent.com/66255010/181220581-9947910b-68b7-47a4-be73-fee505103d4a.png)
+![homepage5](https://user-images.githubusercontent.com/66255010/181220619-0d93c253-242d-4348-815f-ff2ab7f77558.png)
+![homepage6](https://user-images.githubusercontent.com/66255010/181220634-9b523244-e14b-44f8-9d06-af399c956a86.png)
+![homeResponsive](https://user-images.githubusercontent.com/66255010/181220699-074af17d-e7a7-40d6-97bf-c054468c8530.png)
+![sidebar](https://user-images.githubusercontent.com/66255010/181220709-95a31349-885e-4dc4-b14e-fe0dcb51400e.png)
 
 # Signin
 
-![register](https://user-images.githubusercontent.com/66255010/122930887-a7330700-d36c-11eb-8fc3-c99e2bf394b7.png)
+![loginpage](https://user-images.githubusercontent.com/66255010/181220847-5b7ece05-7e4c-4d21-bf70-c8ab05433638.png)
 
+# Signup
 
-# Sofaspage
+![registerpage](https://user-images.githubusercontent.com/66255010/181220964-75f0b557-c145-4592-a152-d5b18c46b22f.png)
 
-![Sofaspage](https://user-images.githubusercontent.com/66255010/122931019-ca5db680-d36c-11eb-9b10-9723bd420a4d.png)
+# Productpage
 
-# Chairspage
+![productpage](https://user-images.githubusercontent.com/66255010/181221080-26c4610e-442c-44b5-aa75-f51972ec8863.png)
 
-![Chairspage](https://user-images.githubusercontent.com/66255010/122931216-f9742800-d36c-11eb-9954-0fa4a061e3ed.png)
+# Single product page (by ID)
 
+![productId](https://user-images.githubusercontent.com/66255010/181221291-ab5d5faa-ebca-4004-b532-010d6930950a.png)
+![productResponsive](https://user-images.githubusercontent.com/66255010/181221314-fcdc5918-3ec2-4cc1-9d0f-556357127779.png)
+
+# Cartpage
+
+![cartpage](https://user-images.githubusercontent.com/66255010/181221417-1c3f2d8d-5fd8-4241-ace0-972dbc724285.png)
 
 
