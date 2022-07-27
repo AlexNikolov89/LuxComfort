@@ -22,7 +22,7 @@ export const loginUser = ({ email, password}) =>async (dispatch, getState) => {
             }
         }
     
-        const {data} = await axios.post('/users/login', { email, password}, config)
+        const {data} = await axios.post('/api/users/login', { email, password}, config)
         //console.log(data)
     
         dispatch({
@@ -53,8 +53,7 @@ export const userRegister = ({ name, email, password}) =>async (dispatch, getSta
             }
         }
     
-        const {data} = await axios.post('/users/register', { name, email, password}, config)
-        console.log(data)
+        const {data} = await axios.post('/api/users/register', { name, email, password}, config)
     
         dispatch({
             type: USER_REGISTER_SUCCESS,

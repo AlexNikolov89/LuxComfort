@@ -39,7 +39,7 @@ const Categories = () => {
             />
             <ImageListItemBar
               title={item.title}
-              lassName={classes.title}
+              className={classes.title}
               position="bottom"
             />
           </ImageListItem>

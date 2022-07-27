@@ -18,8 +18,7 @@ const Lighteningpage = () => {
         dispatch(getAllProducts())
     }, [dispatch])
 
-    console.log(products)
-    const lightening = products.filter(product => {
+    const lightening = products?.filter(product => {
         return product.category.includes('Lightening')
     })
     //console.log(sofas)
@@ -27,13 +26,13 @@ const Lighteningpage = () => {
     return (
         <Container maxWidth='lg'>
         <div className={classes.lighteningpage}>
-            <Typography gutterBottom={true} className={classes.title} variant='h4'>Lamps ({lightening.length} Articles)</Typography>     
+            <Typography gutterBottom={true} className={classes.title} variant='h4'>Lamps ({lightening?.length} Articles)</Typography>     
 
             <Typography variant='subtitle1' className={classes.text}>Don’t just sit there in the dark, let there be light! From floor lamps to wall lamps, table lamps to pendants, we’ve got a lamp for every room and situation.</Typography>
 
             
             <Grid container className={classes.gridContainer}>
-            {lightening.map((light, id) => {
+            {lightening?.map((light, id) => {
                 return (
                     <Light key={id} light={light} />)
             })}

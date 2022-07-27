@@ -17,7 +17,6 @@ export const addToCart = (product, quantity) => (dispatch, getState) => {
         type: ADD_TO_CART,
         payload: cartItem
     })
-    console.log(cartItem)
 
     localStorage.setItem('cartItems', JSON.stringify(getState().addToCartReducer.cartItems))
 }

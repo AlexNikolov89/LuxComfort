@@ -18,8 +18,7 @@ const Officepage = () => {
         dispatch(getAllProducts())
     }, [dispatch])
 
-    console.log(products)
-    const office = products.filter(product => {
+    const office = products?.filter(product => {
         return product.category.includes('Office')
     })
     //console.log(sofas)
@@ -27,13 +26,13 @@ const Officepage = () => {
     return (
         <Container maxWidth='lg'>
         <div className={classes.officepage}>
-            <Typography gutterBottom={true} className={classes.title} variant='h4'>Lamps ({office.length} Articles)</Typography>     
+            <Typography gutterBottom={true} className={classes.title} variant='h4'>Lamps ({office?.length} Articles)</Typography>     
 
             <Typography variant='subtitle1' className={classes.text}>Add comfort and style to your workplace with an office sofa. Perfect as a reception sofa in the hotel, club or lounge, these modern designs will create the perfect relaxation spot in the corporate space.</Typography>
 
             
             <Grid container className={classes.gridContainer}>
-            {office.map((item, id) => {
+            {office?.map((item, id) => {
                 return (
                     <Office key={id} item={item} />)
             })}

@@ -17,13 +17,12 @@ const LatestProducts = () => {
         //dots: true,
         infinite: true,
         speed: 700,
-        slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToShow: 3.5,
+        slidesToScroll: 2
     }
 
     const getAllProductsReducer = useSelector(state => state.getAllProductsReducer)
     const {loading, products, error} = getAllProductsReducer;
-    console.log("🚀 ~ file: LatestProducts.js ~ line 23 ~ LatestProducts ~ getAllProductsReducer", getAllProductsReducer)
 
 
     useEffect(() => {

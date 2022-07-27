@@ -17,8 +17,7 @@ const Tablespage = () => {
         dispatch(getAllProducts())
     }, [dispatch])
 
-    console.log(products)
-    const tables = products.filter(product => {
+    const tables = products?.filter(product => {
         return product.category.includes('Tables')
     })
     //console.log(sofas)
@@ -26,13 +25,13 @@ const Tablespage = () => {
     return (
         <Container maxWidth='lg'>
         <div className={classes.tablespage}>
-            <Typography gutterBottom={true} className={classes.title} variant='h4'>Tables ({tables.length} Articles)</Typography>     
+            <Typography gutterBottom={true} className={classes.title} variant='h4'>Tables ({tables?.length} Articles)</Typography>     
 
             <Typography variant='subtitle1' className={classes.text}>Whether it’s an intimate meal for two or a feast for the whole family, the right dining table for the occasion is crucial. Simple and sleek or adjustable and extendable, you can find your perfect table right here.</Typography>
 
             
             <Grid container className={classes.gridContainer}>
-            {tables.map((table, id) => {
+            {tables?.map((table, id) => {
                 return (
                     <Table key={id} table={table} />)
             })}

@@ -29,7 +29,7 @@ const AllProducts = () => {
     return (
         <Container maxWidth='md'>
         <Box>
-            <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3, lg: '3'}} style={{ justifyContent: 'center'  }}>
+            <Grid container columnspacing={{ xs: 1, sm: 2, md: 3, lg: '3'}} style={{ justifyContent: 'center'  }}>
                 {accessories?.slice(0, visible).map((product, index) => {
                     return <Product product={product} key={index} />
                 })}

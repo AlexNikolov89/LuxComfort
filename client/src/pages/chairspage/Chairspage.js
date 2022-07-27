@@ -17,22 +17,20 @@ const Chairspage = () => {
         dispatch(getAllProducts())
     }, [dispatch])
 
-    console.log(products)
-    const chairs = products.filter(product => {
+    const chairs = products?.filter(product => {
         return product.category.includes('Dining Chairs')
     })
-    console.log(chairs)
     
     return (
         <Container maxWidth='lg'>
         <div className={classes.chairspage}>
-            <Typography gutterBottom={true} className={classes.title} variant='h4'>Sofas ({chairs.length} Articles)</Typography>     
+            <Typography gutterBottom={true} className={classes.title} variant='h4'>Chairs ({chairs?.length} Articles)</Typography>     
             {/*<SofaCategories /> */}
             <Typography  variant='subtitle1' className={classes.text}>For sharing stories and sparking conversation around great food, friends and family. Get up close and personal in our comfortable dining chairs designed to transform your living space.</Typography>
 
             <Grid container className={classes.gridContainer}>
-            {chairs.map(chair => {
-                return <Chair key={chair.id} chair={chair} />
+            {chairs?.map(chair => {
+                return <Chair key={chair._id} chair={chair} />
             })}
             </Grid>
            

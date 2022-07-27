@@ -17,20 +17,19 @@ const Bedspage = () => {
         dispatch(getAllProducts())
     }, [dispatch])
 
-    console.log(products)
-    const beds = products.filter(product => {
+    const beds = products?.filter(product => {
         return product.category.includes('Beds')
     })
     
     return (
         <Container maxWidth='lg'>
         <div className={classes.bedspage}>
-            <Typography gutterBottom={true} className={classes.title} variant='h4'>Beds ({beds.length} Articles)</Typography>     
+            <Typography gutterBottom={true} className={classes.title} variant='h4'>Beds ({beds?.length} Articles)</Typography>     
             {/*<SofaCategories /> */}
             <Typography gutterBottom={true} variant='subtitle2' className={classes.text}>A wild mess? Not even close. On this page we have not only listed a lot of pretty furniture <br /> that you can find inspiration by scrolling through.</Typography>
 
             <Grid container spacing={3} className={classes.gridContainer}>
-            {beds.map(bed => {
+            {beds?.map(bed => {
                 return <Bed key={bed.id} bed={bed} />
             })}
             </Grid>

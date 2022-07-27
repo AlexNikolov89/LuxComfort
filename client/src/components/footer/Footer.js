@@ -7,7 +7,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import { useStyles } from './style';
-import { ExpansionPanel, ExpansionPanelDetails, ExpansionPanelSummary } from '@material-ui/core';
+import { Accordion, AccordionSummary, AccordionDetails } from '@material-ui/core';
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 
@@ -38,44 +38,44 @@ const Footer = () => {
             </Paper>
 
             <div className={classes.expandInfo}>
-            <ExpansionPanel style={{ marginBottom: '10px' }}>
-                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <Accordion style={{ marginBottom: '10px' }}>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                     <div className={classes.container}>
                         <Typography gutterBottom className={classes.typography}>Need Help?</Typography>
                     </div>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails className={classes.panelDetails}>
+                </AccordionSummary>
+                <AccordionDetails className={classes.panelDetails}>
                     <Typography variant='subtitle2' gutterBottom>Help Center</Typography>
                     <Typography variant='subtitle2' gutterBottom>Contact Us</Typography>
                     <Typography variant='subtitle2' gutterBottom>Track your Order</Typography>
-                </ExpansionPanelDetails>
-            </ExpansionPanel>
+                </AccordionDetails>
+            </Accordion>
         
-            <ExpansionPanel style={{ marginBottom: '10px' }}>
-                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <Accordion style={{ marginBottom: '10px' }}>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                     <div className={classes.container}>
                         <Typography gutterBottom className={classes.typography}>Delivery & Returns</Typography>
                     </div>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails className={classes.panelDetails}>
+                </AccordionSummary>
+                <AccordionDetails className={classes.panelDetails}>
                     <Typography variant='subtitle2' gutterBottom>Delivery & Collection</Typography>
                     <Typography variant='subtitle2' gutterBottom>Returns & refunds</Typography>
                     <Typography variant='subtitle2'>FAQs</Typography>
-                </ExpansionPanelDetails>
-            </ExpansionPanel>
+                </AccordionDetails>
+            </Accordion>
 
-            <ExpansionPanel>
-                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <Accordion>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                     <div className={classes.container}>
                         <Typography gutterBottom className={classes.typography}>About Us</Typography>
                     </div>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails className={classes.panelDetails}>
+                </AccordionSummary>
+                <AccordionDetails className={classes.panelDetails}>
                     <Typography gutterBottom>About Lux Comfort</Typography>
                     <Typography gutterBottom>Contact Us</Typography>
                     <Typography gutterBottom>Careers</Typography>
-                </ExpansionPanelDetails>
-            </ExpansionPanel>
+                </AccordionDetails>
+            </Accordion>
             </div>
         </Toolbar>
 

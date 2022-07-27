@@ -6,7 +6,6 @@ import { Card, Grid, Paper, Typography } from '@material-ui/core'
 
 const Sofa = ({sofa}) => {
     const classes = useStyles()
-    console.log(sofa)
     
     return (
         <div className={classes.sofa}>

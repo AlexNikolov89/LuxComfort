@@ -19,8 +19,7 @@ const Sofaspage = () => {
         dispatch(getAllProducts())
     }, [dispatch])
 
-    console.log(products)
-    const sofas = products.filter(product => {
+    const sofas = products?.filter(product => {
         return product.category.includes('Sofa')
     })
     //console.log(sofas)
@@ -28,13 +27,13 @@ const Sofaspage = () => {
     return (
         <Container maxWidth='lg'>
         <div className={classes.sofaspage}>
-            <Typography gutterBottom={true} className={classes.title} variant='h4'>Sofas ({sofas.length} Articles)</Typography>     
+            <Typography gutterBottom={true} className={classes.title} variant='h4'>Sofas ({sofas?.length} Articles)</Typography>     
             {/*<SofaCategories /> */}
             <Typography variant='subtitle1' className={classes.text}>Space. Space to relax. Space to enjoy. Space to snuggle. Space to stretch. Space to invite. Give yourself the space you need with one of our sofas.</Typography>
 
             
             <Grid container className={classes.gridContainer}>
-            {sofas.map((sofa, id) => {
+            {sofas?.map((sofa, id) => {
                 return (
                     <Sofa key={id} sofa={sofa} />)
             })}

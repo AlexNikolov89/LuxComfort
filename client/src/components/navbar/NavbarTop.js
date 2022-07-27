@@ -46,7 +46,6 @@ const Navbar = () => {
 
     const userLoginReducer = useSelector(state => state.userLoginReducer)
     const { userInfo} = userLoginReducer
-    console.log("🚀 ~ file: NavbarTop.js ~ line 26 ~ NavbarTop ~ userInfo", userInfo)
 
     const logoutHandler = () => {
         dispatch(logout())
@@ -96,9 +95,8 @@ const Navbar = () => {
                 </Badge>
             </IconButton>
 
-            <IconButton color='inherit'>
-                <AccountCircleIcon 
-                onClick={handleOpenMenu} 
+            <IconButton color='inherit' onClick={handleOpenMenu}>
+                <AccountCircleIcon  
                 aria-controls='menu'
                 />
             </IconButton>

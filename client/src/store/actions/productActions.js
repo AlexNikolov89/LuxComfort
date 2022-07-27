@@ -12,8 +12,7 @@ export const getAllProducts = () => async dispatch => {
     try {
         dispatch({ type: GET_ALL_PRODUCTS_REQUEST })
 
-        const {data} = await axios.get('/products')
-        console.log("🚀 ~ file: productActions.js ~ line 16 ~ data", data)
+        const {data} = await axios.get('/api/products')
 
         dispatch({
             type: GET_ALL_PRODUCTS_SUCCESS,
@@ -31,7 +30,7 @@ export const getProductById = (id) => async dispatch => {
     try {
         dispatch({ type: GET_PRODUCT_BY_ID_REQUEST })
 
-        const {data} = await axios.get(`/products/${id}`)
+        const {data} = await axios.get(`/api/products/${id}`)
 
         dispatch({
             type: GET_PRODUCT_BY_ID_SUCCESS,
@@ -49,7 +48,7 @@ export const listTopProducts = () => async dispatch => {
     try {
         dispatch({ type: 'PRODUCT_TOP_REQUEST' })
 
-        const {data} = await axios.get(`/products/top`)
+        const {data} = await axios.get(`/api/products/top`)
 
         dispatch({
             type: 'PRODUCT_TOP_SUCCESS',

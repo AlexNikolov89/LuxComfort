@@ -18,20 +18,19 @@ const Accessoriespage = () => {
         dispatch(getAllProducts())
     }, [dispatch])
 
-    console.log(products)
-    const accessories = products.filter(product => {
+    const accessories = products?.filter(product => {
         return product.category.includes('Accessories')
     })
     
     return (
         <Container maxWidth='lg'>
         <div className={classes.accessoriespage}>
-            <Typography gutterBottom={true} className={classes.title} variant='h4'>Accessories ({accessories.length} Articles)</Typography>     
+            <Typography gutterBottom={true} className={classes.title} variant='h4'>Accessories ({accessories?.length} Articles)</Typography>     
             {/*<SofaCategories /> */}
             <Typography gutterBottom={true} variant='subtitle2' className={classes.text}>Your home is an expression of you. Start expressing yourself with stylish forms of decorations and create a home filled with magical and meaningful features. Take a look at these decorations. What can they do for you?</Typography>
 
             <Grid container spacing={3} className={classes.gridContainer}>
-            {accessories.map((item, id) => {
+            {accessories?.map((item, id) => {
                 return <Accessories key={id} item={item} />
             })}
             </Grid>

@@ -34,7 +34,6 @@ const Login = ({location}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(email, password)
         dispatch(loginUser({email, password}))
         history.push('/')
         if(userInfo) {

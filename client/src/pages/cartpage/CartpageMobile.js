@@ -9,7 +9,7 @@ import { useStyles } from './style';
 const CartpageMobile = ({cartItems, addToCart, removeFromCart}) => {
     const classes = useStyles()
     const dispatch = useDispatch()
-    console.log(cartItems)
+
     return (
         <Fragment>
                 <div className={classes.mobile}>
