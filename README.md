@@ -4,11 +4,11 @@ LuxComfort is my own project idea.
 As an ex interior Designer, I have decided to create e-commerce shop for selling furniture and give ideas and tips about home design or any 
 kind of interior.
 
-I am using React and Redux as Clientside and Node.js and Express with MongoDB for Server side. 
+I am using React and Redux as Clientside with MUI and Node.js and Express with MongoDB for Server side. 
 
 All products has been fetched from the server.
 
-It is still under construction :) but you can have a look from my screenshots how is looking 👇
+It is still under construction :) but you can have a look from my screenshots bellow how is looking 👇 or visit the link https://62e100263e88b3000af746eb--cute-blini-257f85.netlify.app/ 
 
 # Homepage
 
